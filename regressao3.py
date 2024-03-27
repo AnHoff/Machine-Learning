@@ -9,13 +9,12 @@ Z = np.array([200, 150, 250, 300, 225, 275, 350, 400, 275, 225])
 # Criando o modelo de regressão linear
 modelo = LinearRegression()
 # Treinando o modelo com os dados (horas de estudo e notas)
-modelo.fit(X, y, Z)
+modelo.fit(X, Y, Z)
 # Fazendo previsões usando o modelo treinado
-y_pred = modelo.predict(X)
+z_pred = modelo.predict(X)
 # Plotando os dados originais e a linha de regressão
-plt.scatter(X, y, Z color='blue') # Dados originais
-plt.plot(X, y, z_pred color=
-'red') # Linha de regressão
+plt.scatter(X, Y, Z color='blue') # Dados originais
+plt.plot(X, Y, z_pred color='red') # Linha de regressão
 plt.title('Relação entre Horas de Estudo e Notas')
 plt.xlabel('Horas de Estudo')
 plt.ylabel('Notas')
