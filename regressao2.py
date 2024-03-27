@@ -10,10 +10,10 @@ modelo = LinearRegression()
 # Treinando o modelo com os dados (horas de estudo e notas)
 modelo.fit(X, Y)
 # Fazendo previsões usando o modelo treinado
-y_pred = modelo.predict(X)
+Y_pred = modelo.predict(X)
 # Plotando os dados originais e a linha de regressão
 plt.scatter(X, Y, color='blue') # Dados originais
-plt.plot(X, y_pred, color='red') # Linha de regressão
+plt.plot(X, Y_pred, color='red') # Linha de regressão
 plt.title('Relação entre Horas de Estudo e Notas')
 plt.xlabel('Horas de Estudo')
 plt.ylabel('Notas')
