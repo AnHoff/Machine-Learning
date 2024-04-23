@@ -14,7 +14,7 @@ Y_pred = modelo.predict(X)
 # Plotando os dados originais e a linha de regressão
 plt.scatter(X, Y, color='blue') # Dados originais
 plt.plot(X, Y_pred, color='red') # Linha de regressão
-plt.title('Relação entre Horas de Estudo e Notas')
-plt.xlabel('Horas de Estudo')
-plt.ylabel('Notas')
+plt.title('Relação entre Temperatura Média (ºC) e Bicicletas Alugadas')
+plt.xlabel('Temperatura Média')
+plt.ylabel('Bicicletas Alugadas')
 plt.show()
