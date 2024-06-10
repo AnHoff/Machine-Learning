@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from sklearn.linear_model import LinearRegression
 
 # Dados de visitantes, publicidade e vendas
@@ -27,8 +26,7 @@ ax.set_zlabel('Vendas (R$)')
 ax.set_title('Dados Originais')
 
 # Superfície de regressão
-visitantes_grid, publicidade_grid = np.meshgrid(np.linspace(visitantes.min(), visitantes.max(), 100),
-                                                np.linspace(publicidade.min(), publicidade.max(), 100))
+visitantes_grid, publicidade_grid = np.meshgrid(np.linspace(visitantes.min(), visitantes.max(), 100), np.linspace(publicidade.min(), publicidade.max(), 100))
 vendas_grid = modelo.predict(np.array([visitantes_grid.flatten(), publicidade_grid.flatten()]).T).reshape(visitantes_grid.shape)
 ax = fig.add_subplot(122, projection='3d')
 ax.plot_surface(visitantes_grid, publicidade_grid, vendas_grid, alpha=0.5)
